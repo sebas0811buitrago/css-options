@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 115 86 121;
+    --secondary: 128 137 162;
+    --button-text-primary: 255 255 255;
+
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+  }
+
+  .theme-reseller {
+    --primary: 32 171 189;
+    --secondary: 193 93 155;
+    --button-text-primary: 255 255 255;
+  }
+
+  button {
+    border: none;
+  }
+}
+
+body {
+  font-family: sans-serif;
+}

@@ -1,0 +1,69 @@
+.button {
+  border-radius: 0.25em;
+}
+
+.solid {
+  --bg-opacity: 1;
+  --bg-color-solid: var(--primary);
+  color: rgb(var(--button-text-primary));
+  background-color: rgba(var(--bg-color-solid) / var(--bg-opacity));
+}
+
+.solid:hover {
+  --bg-opacity: 0.7;
+}
+
+.inverted {
+  --color-inverted: var(--primary);
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(var(--color-inverted));
+  color: rgba(var(--color-inverted));
+  font-weight: 300;
+}
+
+.inverted:hover {
+  background-color: rgb(var(--color-inverted));
+  color: white;
+}
+
+/* VARIANTS  */
+.primary {
+  composes: solid;
+  --bg-color-solid: var(--primary);
+}
+
+.secondary {
+  composes: solid;
+  --bg-color-solid: var(--secondary);
+}
+
+.invertedPrimary {
+  composes: inverted;
+  --color-inverted: var(--primary);
+}
+
+.invertedSecondary {
+  composes: inverted;
+  --color-inverted: var(--secondary);
+}
+
+/* SIZES */
+.sm {
+  font-size: var(--text-sm);
+  line-height: 1.25rem;
+  padding: 0.25rem;
+}
+
+.md {
+  font-size: var(--text-base);
+  padding: 0.5rem 1.25rem;
+  line-height: 1.5rem;
+}
+
+.lg {
+  font-size: var(--text-lg);
+  padding: 0.5rem 1.25rem;
+  line-height: 1.75rem;
+}
